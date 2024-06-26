@@ -7,24 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="navbar"></div>
     <div class="container">
         <header>
             <span class="close-button">✕</span>
+            <h1>כניסה לאזור האישי</h1>
         </header>
         <main>
-            <div class="form-container">
-                <h1>כניסה לאזור האישי</h1>
-                <img src="images/hand_phone.jpg" alt="App Icon" class="app-icon">
-                <form>
-                    <label for="id-number">מספר זהות</label>
-                    <input type="text" id="id-number" name="id-number">
-                    <a href="#" class="alternative-link">כניסה עם מספר דרכון</a>
-                    <label for="phone-number">טלפון / דוא"ל</label>
-                    <input type="text" id="phone-number" name="phone-number">
-                    <button type="submit" class="submit-button">שלחו לי קוד בהודעה</button>
-                </form>
-                <a href="#" class="phone-code-link">רוצה לקבל קוד בשיחה טלפונית</a>
-            </div>
+            <img src="hand_phone.jpg" alt="App Icon" class="app-icon">
+            <p class="greeting">שלום!</p>
+            <p class="instruction">כדי שנוכל לזהות אותך, צריך למלא את הפרטים הבאים ולבחור את שיטת הזיהוי.</p>
+            <form>
+                <label for="id-number">מספר זהות</label>
+                <input type="text" id="id-number" name="id-number">
+                <a href="#" class="alternative-link">כניסה עם מספר דרכון</a>
+                <label for="phone-number">טלפון / דוא"ל</label>
+                <input type="text" id="phone-number" name="phone-number">
+                <button type="submit" class="submit-button">שלחו לי קוד בהודעה</button>
+            </form>
+            <a href="#" class="phone-code-link">קוד בשיחת טלפון</a>
         </main>
         <footer>
             <p>יש בעיה או שאלה? כנסו למוקד התמיכה הטכנית</p>
