@@ -1,11 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
-
+/* styles.css */
 body {
-    font-family: 'Alef', sans-serif;
+    font-family: 'Arial', sans-serif;
     direction: rtl;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 5px 20px;
+    background-color: #222;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    float: left;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
 }
 
 .container {
@@ -13,65 +58,58 @@ body {
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
+    padding: 80px 20px 20px; /* Adjusted padding to accommodate fixed navbar */
     box-sizing: border-box;
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-    background-color: #f5f5f5;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
 .close-button {
     font-size: 24px;
     cursor: pointer;
-    color: #4a4a4a;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px);
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.form-container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    max-width: 400px;
-    width: 100%;
+    color: #000000;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #000000;
-    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+    font-weight: normal;
 }
 
 .app-icon {
     width: 100px;
-    margin: 20px auto;
-    display: block;
+    margin: 20px 0;
+}
+
+.greeting {
+    font-size: 18px;
+    margin: 0;
+}
+
+.instruction {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
 }
 
 label {
     margin: 10px 0 5px;
     font-size: 14px;
-    color: #000000;
-    font-weight: 400;
+    color: #000;
 }
 
 input[type="text"] {
@@ -81,7 +119,6 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 16px;
 }
 
 .alternative-link {
@@ -89,8 +126,6 @@ input[type="text"] {
     text-decoration: none;
     margin-bottom: 20px;
     align-self: flex-start;
-    font-size: 14px;
-    font-weight: 400;
 }
 
 .submit-button {
@@ -98,11 +133,11 @@ input[type="text"] {
     color: white;
     border: none;
     border-radius: 25px;
-    padding: 15px;
+    padding: 10px;
     cursor: pointer;
-    font-size: 18px;
-    font-weight: 700;
+    width: 100%;
     margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .phone-code-link {
@@ -111,52 +146,11 @@ input[type="text"] {
     display: block;
     margin-bottom: 20px;
     font-size: 14px;
-    font-weight: 400;
 }
 
 footer {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
     font-size: 14px;
     color: #555;
-    font-weight: 400;
-}
-
-/* Media Queries for Responsive Design */
-@media (min-width: 768px) {
-    .container {
-        max-width: none;
-        width: 100%;
-        height: 100vh;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    main {
-        height: 100%;
-        padding: 0;
-        background-image: url('images/city_background.jpg'); /* Link to the background image */
-        background-size: cover;
-        background-position: center;
-    }
-
-    .form-container {
-        max-width: 450px;
-        padding: 60px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .app-icon {
-        display: none;
-    }
-
-    footer {
-        font-size: 16px;
-        padding: 30px;
-    }
 }
